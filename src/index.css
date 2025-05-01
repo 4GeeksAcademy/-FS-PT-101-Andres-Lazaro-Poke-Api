@@ -1,0 +1,78 @@
+.pokecontainer{
+    display: grid;
+    grid-auto-flow: column;
+    height: auto;
+    overflow-x: auto;
+    overflow-y:hidden ;
+    align-items: center;
+    
+}
+
+.container img{
+    height: 210px;
+}
+
+.contenedorios{
+    justify-items: center;
+   
+}
+
+.divCards{
+
+    width: 20rem;
+    
+    
+}
+
+.pokeCard{
+    border-radius:  10px;
+    border: solid black 5px ;
+    background-color: white;
+    
+}
+
+
+
+.singleCard {
+    justify-content: space-between;
+    margin-top: 150px;
+}
+
+.singleContainer{
+    justify-items: center;
+
+}
+
+.imgDetailPokemon{
+ 
+        width: 35%;
+        height: auto;
+        object-fit: cover;
+   
+}
+
+
+.detailContainer{
+    
+    height: auto;
+
+}
+
+.buttons{
+    justify-content:center;
+}
+
+
+.navbar{
+    height: 50px;
+
+
+
+
+}
+
+
+.pokemonLogo {
+    height: 150px !important;
+    width: auto !important;
+}
