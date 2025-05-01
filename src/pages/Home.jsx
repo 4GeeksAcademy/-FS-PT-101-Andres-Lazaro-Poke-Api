@@ -62,6 +62,14 @@ export const Home = () => {
                     </div>
 
 
+                    <div>
+                        <h2>Favoritos:</h2>
+                        <ul>
+                            {store.favorites.map((fav, index) => (
+                                <li key={index}>{fav.name}</li>
+                            ))}
+                        </ul>
+                    </div>
 
                 </div>
             </section>

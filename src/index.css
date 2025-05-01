@@ -48,7 +48,6 @@
         width: 35%;
         height: auto;
         object-fit: cover;
-   
 }
 
 
@@ -71,8 +70,11 @@
 
 }
 
-
 .pokemonLogo {
     height: 150px !important;
     width: auto !important;
+}
+
+li{
+    color: green;
 }

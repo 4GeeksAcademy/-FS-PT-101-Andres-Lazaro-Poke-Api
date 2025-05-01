@@ -23,16 +23,13 @@ export const PokeCard = ({ name, url, image, }) => {
 
 
   const changeFavorite = () => {
-    const set = store.favorites.some(element => element=== name)
+    const set = store.favorites.some(element => element === name)
       if (set) {
         dispatch({type:`remove_favorite`, payload: name})
-
       }
       if  (set=== false){
         dispatch({type:`add_favorite`, payload: {name: name, url: url, pid: pid } })
       }
-
-
   }
 
   return (

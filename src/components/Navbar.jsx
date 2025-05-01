@@ -13,13 +13,13 @@ export const Navbar = () => {
 					<img  className="pokemonLogo" src="https://logowik.com/content/uploads/images/pokemon4400.logowik.com.webp" alt="" />
 				</Link>
  				<div className="ml-auto">
-					<div class="dropdown-center">
+					<div className="dropdown-center">
 						<button className="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Centered dropdown
 						</button>
 						<ul className="dropdown-menu">
 							{store.favorites?.map((el,index) => 
-							<li>{el}</li>
+							<li key ={index}>{el.name}</li>
 							)}
 						</ul>
 						{console.log(store.favorites.length)}
