@@ -15,7 +15,8 @@ export function StoreProvider({ children }) {
     // Provide the store and dispatch method to all child components.
     useEffect(() => {
         pokeApiServices.getAllPokemon().then(data => dispatch({ type: 'pokemon_data', payload: data }))
-    }, []);
+        
+    },[]);
 
     return <StoreContext.Provider value={{ store, dispatch }}>
         {children}

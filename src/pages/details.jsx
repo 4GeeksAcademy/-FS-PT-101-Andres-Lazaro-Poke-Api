@@ -5,8 +5,13 @@ import useGlobalReducer from "../hooks/useGlobalReducer";
 
 export const Details = () => {
     const { store, dispatch } = useGlobalReducer();
-    const { id } = useParams(); // Extraer el ID directamente de la URL
+    const { id, name } = useParams(); // Extraer el ID directamente de la URL
     console.log("ID recibido:", id);
+
+    const pokemonsArray = store.pokemons?.results || []; // Asegura que sea un array
+    const imageUrl = pokemonsArray.some(element => element.name === name)
+        ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
+        : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ibqf1l8aAnILc-D-3CrrI4l7AC7Gd9pzCQ&s";
 
     useEffect(() => {
         pokeApiServices.getSinglePokemon(id).then(data => {
@@ -24,7 +29,7 @@ export const Details = () => {
                         {/* Construir la URL directamente utilizando el ID */}
                         <img
                             className="imgDetailPokemon img-fluid"
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+                            src={imageUrl}
                             alt={store.details?.name}
                         />
                     </div>

@@ -1,80 +1,65 @@
-.pokecontainer{
+.pokecontainer {
     display: grid;
     grid-auto-flow: column;
     height: auto;
     overflow-x: auto;
-    overflow-y:hidden ;
+    overflow-y: hidden;
     align-items: center;
-    
 }
 
-.container img{
+.container img {
     height: 210px;
 }
 
-.contenedorios{
+.principalContainer {
     justify-items: center;
-   
 }
 
-.divCards{
-
+.divCards {
     width: 20rem;
-    
-    
 }
 
-.pokeCard{
-    border-radius:  10px;
-    border: solid black 5px ;
+.pokeCard {
+    border-radius: 10px;
+    border: solid black 5px;
     background-color: white;
-    
 }
-
-
 
 .singleCard {
     justify-content: space-between;
     margin-top: 150px;
 }
 
-.singleContainer{
+.singleContainer {
     justify-items: center;
-
 }
 
-.imgDetailPokemon{
- 
-        width: 35%;
-        height: auto;
-        object-fit: cover;
-}
-
-
-.detailContainer{
-    
+.imgDetailPokemon {
+    width: 35%;
     height: auto;
-
+    object-fit: cover;
 }
 
-.buttons{
-    justify-content:center;
+.detailContainer {
+    height: auto;
 }
 
+.buttons {
+    justify-content: center;
+}
 
-.navbar{
-    height: 50px;
-
-
-
-
+.navbar {
+    height: 80px;
 }
 
 .pokemonLogo {
-    height: 150px !important;
+    height: 100px !important;
     width: auto !important;
 }
 
-li{
-    color: green;
+@media (max-width: 768px) {
+    .dropdown {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
 }

@@ -1,5 +1,5 @@
-export const initialStore=()=>{
-  return{
+export const initialStore = () => {
+  return {
     message: null,
     todos: [
       {
@@ -19,7 +19,7 @@ export const initialStore=()=>{
 
 
 export default function storeReducer(store, action = {}) {
-  switch(action.type){
+  switch (action.type) {
 
     case 'pokemon_location':
       return {
@@ -37,17 +37,12 @@ export default function storeReducer(store, action = {}) {
         ...store,
         pokemons: action.payload
       };
-      
-      case "add_favorite": // Acción para agregar favoritos
-      return {
-        ...store,
-        favorites: [...store.favorites, action.payload],
-      };
 
-    case "remove_favorite": // Acción para eliminar favoritos
+    case "set_favorite": // Acción para eliminar favoritos
+      const is_favorite = store.favorites.some(element => element.name === action.payload.name)
       return {
         ...store,
-        favorites: store.favorites.filter((fav) => fav !== action.payload),
+        favorites: is_favorite ? store.favorites.filter(fav => fav.name !== action.payload.name) : [...store.favorites, action.payload]
       };
 
     default:
